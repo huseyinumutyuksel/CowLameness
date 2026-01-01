@@ -1,5 +1,5 @@
-# MMPose Requirements
-# OpenMMLab ecosystem for pose estimation
+# MMPose Requirements with AP-10K Support
+# OpenMMLab ecosystem for animal pose estimation
 
 # Package installer
 openmim==0.3.9
@@ -33,3 +33,6 @@ scipy==1.11.3
 
 # Utilities
 tabulate==0.9.0
+
+# YAML for config
+pyyaml==6.0.1

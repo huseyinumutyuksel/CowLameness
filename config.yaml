@@ -1,0 +1,46 @@
+# Cow Lameness Detection - Configuration
+# Switch between frameworks and enable/disable features
+
+# Pose Estimation Framework (switch between DLC and MMPose)
+pose_framework: "deeplabcut"  # Options: "deeplabcut" or "mmpose"
+
+# DeepLabCut Configuration
+deeplabcut:
+  model: "superanimal_quadruped"
+  confidence_threshold: 0.5
+
+# MMPose Configuration  
+mmpose:
+  model: "ap10k"  # Animal Pose dataset
+  config: "rtmpose-m_8xb64-210e_ap10k-256x256"
+  confidence_threshold: 0.5
+
+# Feature Extraction (enable/disable)
+features:
+  yolo_detection: true          # Multi-cow detection (select largest)
+  sam_segmentation: true        # Segment Anything for cow isolation
+  videomae: true                # Self-supervised visual features
+  optical_flow: true            # RAFT temporal motion
+  back_curvature: true          # Kambur duruş analysis
+  
+# Model Configuration
+model:
+  type: "temporal_transformer"  # Temporal Transformer for video classification
+  hidden_dim: 256
+  num_heads: 8
+  num_layers: 4
+  dropout: 0.3
+
+# Training Configuration
+training:
+  batch_size: 16
+  epochs: 30
+  learning_rate: 0.001
+  cv_folds: 5
+  
+# Data Split
+data:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  random_seed: 42

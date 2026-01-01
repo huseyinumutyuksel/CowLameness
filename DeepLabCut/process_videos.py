@@ -66,7 +66,7 @@ def initialize_deeplabcut_project():
         logger.error("   Please check VIDEO_DIR path in script")
         sys.exit(1)
     
-    config_path = deeplabcut.create_pretrained_project(
+    result = deeplabcut.create_pretrained_project(
         project_name,
         experimenter,
         [str(dummy_video)],
@@ -76,6 +76,12 @@ def initialize_deeplabcut_project():
         model="superanimal_quadruped",
         videotype=".mp4"
     )
+    
+    # Handle tuple or string return
+    if isinstance(result, tuple):
+        config_path = result[0]
+    else:
+        config_path = result
     
     logger.info(f"✅ DLC project created: {config_path}")
     return config_path
@@ -96,21 +102,27 @@ def process_single_video(config_path: str, video_path: Path) -> bool:
             destfolder=str(OUTPUT_DIR)
         )
         
-        # Verify output (Satır 23: filename must match)
-        expected_csv = OUTPUT_DIR / f"{video_path.stem}_DLC_SuperAnimal.csv"
-        if expected_csv.exists():
+        # Verify output - DeepLabCut creates files with model name in filename
+        # Format: videonameDLC_modelname_projectname_shuffle_iteration.csv
+        output_csvs = list(OUTPUT_DIR.glob(f"{video_path.stem}DLC*.csv"))
+        
+        if output_csvs:
+            output_csv = output_csvs[0]  # Take first match
             # Check CSV structure
-            df = pd.read_csv(expected_csv, header=[1,2])
+            df = pd.read_csv(output_csv, header=[1,2])
             logger.info(f"✅ Test successful!")
-            logger.info(f"   Output: {expected_csv}")
+            logger.info(f"   Output: {output_csv.name}")
             logger.info(f"   Shape: {df.shape} (frames x keypoints)")
             return True
         else:
-            logger.error(f"❌ Output file not found: {expected_csv}")
+            logger.error(f"❌ No output CSV found for: {video_path.stem}")
+            logger.error(f"   Expected pattern: {video_path.stem}DLC*.csv")
             return False
             
     except Exception as e:
         logger.error(f"❌ Error processing video: {e}")
+        import traceback
+        logger.error(traceback.format_exc())
         return False
 
 def process_batch(config_path: str, video_list: List[Path], resume: bool = True):
@@ -123,8 +135,9 @@ def process_batch(config_path: str, video_list: List[Path], resume: bool = True)
     # Check already processed videos (resume capability)
     processed = []
     if resume:
-        existing_csvs = list(OUTPUT_DIR.glob("*_DLC_SuperAnimal.csv"))
-        processed = [csv.stem.replace("_DLC_SuperAnimal", "") for csv in existing_csvs]
+        existing_csvs = list(OUTPUT_DIR.glob("*DLC*.csv"))
+        # Extract video names from DLC output format
+        processed = [csv.stem.split('DLC')[0] for csv in existing_csvs]
         logger.info(f"📊 Found {len(processed)} already processed videos (will skip)")
     
     # Filter out processed videos

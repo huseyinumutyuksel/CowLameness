@@ -6,7 +6,7 @@
 
 **Production-ready, academically rigorous system for automated lameness detection in dairy cattle using pose estimation and deep learning.**
 
-**İnek sütünde topallık tespiti için pose tahmini ve derin öğrenme kullanan, üretime hazır, akademik olarak titiz sistem.**
+**İnek sürüsünde topallık tespiti için pose tahmini ve derin öğrenme kullanan, üretime hazır, akademik olarak titiz sistem.**
 
 ---
 
