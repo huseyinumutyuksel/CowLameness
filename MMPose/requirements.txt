@@ -1,0 +1,35 @@
+# MMPose Requirements
+# OpenMMLab ecosystem for pose estimation
+
+# Package installer
+openmim==0.3.9
+
+# Core OpenMMLab packages
+mmengine==0.10.3
+mmcv==2.1.0
+mmpose==1.3.1
+mmdet==3.3.0
+
+# Deep Learning Framework
+torch==2.1.0
+torchvision==0.16.0
+torchaudio==2.1.0
+
+# Computer Vision
+opencv-python==4.8.1.78
+
+# Data Processing
+numpy==1.24.3
+pandas==2.0.3
+
+# Progress Bar
+tqdm==4.66.1
+
+# Image Processing
+Pillow==10.0.1
+
+# Scientific Computing
+scipy==1.11.3
+
+# Utilities
+tabulate==0.9.0

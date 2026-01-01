@@ -1,0 +1,37 @@
+Bu talimatlar listesi zorunlu uygulanmalıdır.
+Sen senior sistem mühendisi ve yapay zeka uzmanı olarak görev görürsün.
+Derin öğrenme algoritmalarını kullanarak ineklerde topallık analizi yapacak şekilde bir proje yürüteceksin.
+Proje production ready ve akademik olarak gold standard olmalıdır.
+Basit çözümler reddedilir. Akademik olarak en iyi çözümleri kullanmalısın.
+Gerçekleştirilmeye çalışan projeye ait başarılı veya başarısız denemelerini içeren çalışmaları Denemeler klasörü altında yer almaktadır.
+Proje klasöründe git yok ise git init ile git oluşturulmalıdır.
+.gitignore dosyası oluşturulmalıdır.
+Deeplapcut için ve Mmpose için 2 ayrı klasör oluşturulmalıdır.
+Her klasörün içinde requirements.txt dosyası oluşturulmalıdır.
+Deeplapcut ın ve Mmpose un en sorunsuz çalışan sürümleri kurulmalıdır.
+requirements.txt dosyasına gerekli kütüphaneler eklenecek.
+Her klasörde gerekli ise farklı sanal ortamlar oluşturulmalıdır.
+uv paket yöneticisi kullanılarak gerekli kütüphaneler kurulacak.
+Her klasörün içinde bir README.md dosyası oluşturulmalıdır. 
+C:\Users\HP\Desktop\Yeni klasör\CowLameness_v15\cow_single_videos klasöründe alt klasörlerde işlenecek video dosyaları bulunur.
+İşlenen videoların çıktısı uygun bir output klasöründe deeplapcut ve mmpose klasörlerinde bulunmalıdır.
+Bu çıktılar Google colab ortamında kullanılmak için drive a  manuel yada otomatik olarak kopyalanmalıdır.
+Hem deeplapcut hem de mmpose  sadece klasörlerinde etiket olan etiketsiz inek videolarında pose estimation yapmalıdır.
+Bu pose estimation çıktıları Google colab ortamında ineklerde topallık analizi yapmak için kullanılır.
+Proje de ileride Deeplapcut ve Mmpose dışında başka kütüphaneler eklenebilir buna uygun temiz bir çalışma yürütülecek.
+Deeplapcut ve Mmpose öncelikle aynı test videosu ile çalıştırılmalı sonra kullanıcı tarafından onaylanırsa tüm videolar için çalıştırılmalıdır.
+Video isimleri ile oluşturulacak cvs ve h5 ve benzeri dosya isimleri aynı olmalıdır.
+Localdeki videolar aynen drive da yer almaktadır. Bu yüzden sadece çıktı olan cvs ve h5 dosyaları drive a kopyalanmalıdır.
+Çalışma sonunda drive daki klasör yapısına uygun tek bir google colab dosyası oluşturulacaktır. Bu dosya altın standartlarada bir akademik çalışma olarak tüm süreci ve production ready kodlamaları içermelidir.
+Üretilecek colab dosyası akademik çalışmalarda kullanılacak ve  rapor oluşturmaya yetecek tüm sayılar bilgileri, tabloları ve tüm görsel çıktıları içermelidir.
+Çalışmada gerçekleştirilecek veri analizi için gerekli kodlar yazılmalıdır.
+Elimizdeki videolar tüm videoları içermektedir. Bu videolar uygun şekilde eğitim doğrulama ve test videoları olarak kullanılmalıdır.
+Baştan da belirtiğim gibi çalışmada manuel etiketleme sadece klasör bilgisi olarak yer almaktadır. Başka hiçbir manuel etiketleme yapılmayacaktır.
+Çalışma sonunda çalışmanın raporu oluşturulmalıdır. Bu rapor akademik çalışmalarda kullanılacaktır. Rapor colab ortamında değil localde oluşturulmalıdır.
+Localde raporu oluşturmak için gerekli olan herşey google colab dosyası çalışması sonucu oluşturulacak outputs klasörü kullanılarak yazılmalıdır.
+Tüm çalışma anlamlı süreçlere ayrılmış olmalıdır.
+Hiçbir adım basit çözümlerle geçiştirilmelidir. Şimdilik çalışsın yeter mantığı ile hiçbir kodlama yapılmamalıdır
+Kod ve akademik çalışma sektör standartlarında olmak zorundadır.
+Çalışma sonrası başarı ve başarısızlıklarını raporunun sonuna yazmalısın.
+Bu talimatlar dosyasında unutulan şeyler olabilir. Bunun için benim bilgime başvurmak zorundasın.
+Bu talimatlara uyulmak zorundadır.

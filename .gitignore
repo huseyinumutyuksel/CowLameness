@@ -1,0 +1,88 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+DeepLabCut/.venv/
+MMPose/.venv/
+env/
+venv/
+.venv/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Project-specific outputs (Satır 17: local outputs)
+DeepLabCut/outputs/
+DeepLabCut/dlc_project/
+MMPose/outputs/
+report_generation/outputs/
+report_generation/downloaded_outputs/
+
+# Experimental notebooks (keep out of version control)
+Denemeler/
+
+# Large files - model checkpoints
+*.pth
+*.pt
+*.h5
+*.pkl
+*.ckpt
+*.safetensors
+
+# Data files (Satır 24: videos are in Drive, not local)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.csv
+*.h5
+
+# DeepLabCut generated projects
+*-*-202*/
+*-*-2025*/
+*-*-2026*/
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+analyze_notebooks.py
+quick_analyze.py
+notebooks_summary.txt
+notebook_analysis_output.txt
+
+# Google Drive sync metadata
+.drive/
