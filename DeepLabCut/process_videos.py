@@ -38,7 +38,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Configuration (Satır 16: local video directory)
-VIDEO_DIR = Path("C:/Users/HP/Desktop/Yeni klasör/CowLameness_v15/cow_single_videos")
+VIDEO_DIR = Path("../cow_single_videos")  # Updated: videos now in project root
 OUTPUT_DIR = Path("./outputs")
 OUTPUT_DIR.mkdir(exist_ok=True)
 
