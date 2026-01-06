@@ -1,0 +1,23 @@
+Bu talimat dosyası talimatlar.txt dosyasındaki kuralları ezemez.
+Bu dosya geçici olarak rapor oluşturmak amacıyla kullanılmalıdır
+Denemeler ve Colab_Notebook klasörlerinin altındaki tüm ipynb dosyaları eksiksiz incelenecektir.
+İncelemeler sonrasında baştan sona bu zamana kadar geçen tüm süreci ve sürecin var ise çıktılarını anlatan bir rapor hazırlanacaktır.
+Raporda henüz tamamlanmamış ve tamamlanması halinde beklenen sonuçları da içeren bir bölüm yer alacaktır.
+Rapor problemin tanımını ve çözüm önerisini içeren giriş bölümü ile başlamak zorundadır.
+Giriş bölümünden sonra materyal ve yöntem bölümü yer alacak olup bu bölümde veri seti anlatılacaktır. Veri setinde yapılan ön işleme çalışmaları anlatılacaktır. Yapılan ön işleme çalışmalarını anlaman için github reposu verilecektir.
+Materyal ve yöntem bölümünden sonra bulgular bölümü yer alacaktır. Bu zamana kadar çalıştırılan eksik kalmış yada tamamlanmış colab dosyalarının çıktıları analiz edilecek ve yorum içermeden bu bölüne görsel kanıt ve tablolar içerecek şekilde yazılacaktır.
+Tartışma ve sonuç bölümünde sürecin neden bu kadar uzun sürdüğü, başarısızlıkların neler olduğu, bu başarısızlıkların çözümünde ne gibi adımlar atılabileceği ve ileriki çalışmalarda hangi yaklaşımların en baştan benimsenmesi gerektiği vurgulanacaktır.
+Son olarak raporun sonuna bir referanslar bölümü yer alacaktır. Bu bölümde kullanılan kaynaklar ve kaynakların türleri belirtilmelidir.,
+Deeplapcut çalışması tamamlanmadığı için son üretilmiş colab Colab_Notebooklar ile çalışma gerçekleştirilmemiş olup henüz sonuçları alınmamıştır. Bu yüzden başarısı ve başarısızlığı noktasında elimizde veri mevcut değildir.
+Rapor oluştururken akademik edilgen bir dil kullanmak zorundasın.
+Raporu oluştururken burası böyle olmalı burada tercih değiştirebilirsiniz gibi raporun içerisine yorumlarını yerleştirme. Yani rapor okuyan birisi için baştan sonra tutarlı akademik bir rapor olmak zorundadır.
+Tüm bölümleri yazdıktan sonra rapor için bir özet bölümü oluştur.
+Özet bölümü giriş bölümünden önce yer almak zorundadır. Özet bölümünün hem ingilizce hem türkçe versiyonunu yaz.
+Anahtar kelimeler kısmını atlama.
+Rapor için bir kapak sayfası hazırla ve buraya raporu hazırlayan kişi Hüseyin Umut Yüksel olarak belirt.
+Dersin kodu YBS 7022 ve dersin adı	Derin Öğrenme Yöntem ve Uygulamaları
+Dersi veren öğretim üyesi 	Doç.Dr. KERİM KÜRŞAT ÇEVİK olacak şekilde raporun kapak sayfasını hazırlamak zorundasın.
+Bakmanı istediğim colab repolarım:
+    https://github.com/huseyinumutyuksel/CowExtractionFromVideos
+    https://github.com/huseyinumutyuksel/CowLameness
+    https://github.com/huseyinumutyuksel/CowLamenessDetection
