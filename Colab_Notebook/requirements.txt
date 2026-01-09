@@ -1,0 +1,55 @@
+# Gait-Based Lameness Detection - Requirements
+
+## Python Packages
+
+### Core Dependencies
+numpy>=1.21.0
+pandas>=1.3.0
+scipy>=1.7.0
+opencv-python-headless>=4.5.0
+scikit-learn>=1.0.0
+tqdm>=4.62.0
+
+### Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+### Computer Vision & Tracking
+ultralytics>=8.0.0  # YOLO v8
+boxmot>=10.0.0  # ByteTrack for cow tracking
+segment-anything @ git+https://github.com/facebookresearch/segment-anything.git
+
+### Transformers & Models
+transformers>=4.30.0
+timm>=0.9.0  # For VideoMAE
+
+### Visualization
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+### Utilities
+pyyaml>=6.0
+
+## Installation
+
+### For Colab:
+```bash
+!pip install -q numpy pandas scipy opencv-python-headless scikit-learn tqdm
+!pip install -q torch torchvision
+!pip install -q ultralytics
+!pip install -q boxmot
+!pip install -q segment-anything git+https://github.com/facebookresearch/segment-anything.git
+!pip install -q transformers timm
+!pip install -q matplotlib seaborn pyyaml
+```
+
+### For Local Development:
+```bash
+pip install -r requirements.txt
+```
+
+## Notes
+
+- **boxmot**: Required for ByteTrack cow tracking (identity persistence)
+- **segment-anything**: Optional if not using SAM segmentation
+- **CUDA**: Recommended for faster processing (GPU support via PyTorch)
