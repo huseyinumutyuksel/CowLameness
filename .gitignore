@@ -21,12 +21,12 @@ wheels/
 *.egg
 
 # Virtual environments
+.venv/
+venv/
+env/
+ENV/
 DeepLabCut/.venv/
 MMPose/.venv/
-env/
-venv/
-.venv/
-ENV/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
@@ -44,12 +44,16 @@ ENV/
 Thumbs.db
 desktop.ini
 
-# Project-specific outputs (Satır 17: local outputs)
+# Project-specific outputs (local outputs)
 DeepLabCut/outputs/
 DeepLabCut/dlc_project/
 MMPose/outputs/
 report_generation/outputs/
 report_generation/downloaded_outputs/
+DeepLabCutOutputs/
+results_v32_test/
+sonuc/
+videos/
 
 # Experimental notebooks (keep out of version control)
 Denemeler/
@@ -62,13 +66,12 @@ Denemeler/
 *.ckpt
 *.safetensors
 
-# Data files (Satır 24: videos are in Drive, not local)
+# Data files (videos are usually in Drive or local untracked)
 *.mp4
 *.avi
 *.mov
 *.mkv
 *.csv
-*.h5
 
 # DeepLabCut generated projects
 *-*-202*/
